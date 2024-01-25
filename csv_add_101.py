@@ -44,5 +44,5 @@ def find_and_process_files(root_dir, file_name='polar.csv'):
                 process_csv(file_path)
 
 # specify the root direction
-root_directory = r'file_path'
+root_directory = r'D:\Machine learning Project\data'
 find_and_process_files(root_directory)

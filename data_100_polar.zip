@@ -1,3 +1,0 @@
-- File"data_100_polar.zip":
-1. if row>101, delete some point uniformly instead of  deleting the last points. 
-2. The total number of test(337) and train(1292) is correct
