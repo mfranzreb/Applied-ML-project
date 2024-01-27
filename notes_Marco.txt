@@ -1,0 +1,20 @@
+Version 0:
+Hyperparams:
+- learning_rate: 0.001
+- batch_size: 100
+- num_epochs: 500
+- layers: 8 layers with 100 units each, ReLu activation
+- optimizer: Adam
+- dtype: float32
+
+After 500 epochs, loss still converging, has periodic peaks. FInal loss: 1.67e-04
+Average distances vary wildly, between 0.001 and 0.03. 
+Max distances much bigger than average
+
+Test loss: 0.0001761
+
+After 2000 iterations, convergence starts, with loss of 1.72e-05
+Average distances much better, between 0.001 and 0.003
+Max distances still around one order of magnitude bigger than average
+
+Test loss: 0.000240 -> worse than after 500 epochs, maybe indicative of overfitting/bad generalization
