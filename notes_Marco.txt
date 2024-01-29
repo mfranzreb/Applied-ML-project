@@ -7,7 +7,7 @@ Hyperparams:
 - optimizer: Adam
 - dtype: float32
 
-After 500 epochs, loss still converging, has periodic peaks. FInal loss: 1.67e-04
+After 500 epochs, loss still converging, has periodic peaks. Final loss: 1.67e-04
 Average distances vary wildly, between 0.001 and 0.03. 
 Max distances much bigger than average
 
@@ -18,3 +18,22 @@ Average distances much better, between 0.001 and 0.003
 Max distances still around one order of magnitude bigger than average
 
 Test loss: 0.000240 -> worse than after 500 epochs, maybe indicative of overfitting/bad generalization
+
+Version 1:
+Same as version 0 but lr = 0.003
+Training loss worse and more unstable than version 0
+Distances also more erratic
+
+Version 2:
+Hyperparams:
+- learning_rate: 0.001
+- batch_size: 100
+- num_epochs: 2000
+- layers: 1 conv2d layer with 10 2x2 filters, 1 conv2d layer with 10 2x10 filters, 1 maxpool3d with kernel of 10x1x2, and 4 fully connected layers going from 50 to 100, ReLu activation
+- optimizer: Adam
+- dtype: float32
+
+Average distances worse than version 0, with very high peaks, and more erratic
+Max distances even more erratic
+Training loss converges to 1.5e-04, but with a lot of oscillations
+Test looss surprisingly good, at 0.00014
