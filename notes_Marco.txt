@@ -37,3 +37,21 @@ Average distances worse than version 0, with very high peaks, and more erratic
 Max distances even more erratic
 Training loss converges to 1.5e-04, but with a lot of oscillations
 Test looss surprisingly good, at 0.00014
+
+Version 3: Upping the learning_rate to 0.005 makes the convergence stall at 500 iterations at a worse loss of 1.5e-04. Test loss: 0.00018
+
+Version 4:
+- Loss is average distance, same NN as v0.
+Results:
+- After 100 epochs/13k steps, Convergence starting.
+- AVg and max distances slightly worse, but 1000 less epochs, so promising.
+
+Version 5, 6, 7:
+- v4 with batches of 30, 60, 200 respectively.
+Results:
+- Batch sizes of 60 and 30 converge slower than 100, with worse loss.
+- 200 is almost identical to 100
+
+Version 8:
+- v0 but with loss being max distance
+- Avg and max distances are much worse (2x) than with loss being avg distance
