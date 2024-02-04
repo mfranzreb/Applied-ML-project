@@ -55,3 +55,8 @@ Results:
 Version 8:
 - v0 but with loss being max distance
 - Avg and max distances are much worse (2x) than with loss being avg distance
+
+Version 9:
+- v4 but at 2000 epochs
+- Less distance on training set, but test set similar. Overfitting?
+- Test loss almost the same even though training loss goes from 0.0035 to 0.0024
