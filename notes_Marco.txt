@@ -60,3 +60,10 @@ Version 9:
 - v4 but at 2000 epochs
 - Less distance on training set, but test set similar. Overfitting?
 - Test loss almost the same even though training loss goes from 0.0035 to 0.0024
+
+Version 10:
+- input as image
+- 91 epochs(12k steps)
+
+Results:
+already converged after 100 steps, with loss of 0.006
