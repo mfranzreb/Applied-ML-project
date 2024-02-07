@@ -164,3 +164,5 @@ interpolateSurface.m
 roundTE.m
 coords.dat
 airfoilRefined.dat
+
+*.ckpt

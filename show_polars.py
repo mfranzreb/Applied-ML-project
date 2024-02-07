@@ -17,7 +17,11 @@ if __name__ == "__main__":
     max = 0
     for folder in subfolders:
         polars = pd.read_csv(os.path.join(folder, "polar.csv"))
-        plt.plot(polars["Cd"], polars["Cl"])
+        coords = pd.read_csv(os.path.join(folder, "coords.csv"))
+        plt.plot(polars["Cd"], polars["Cl"], "o-")
+        plt.show()
+        plt.plot(coords["x"], coords["y"], "o-")
+        plt.gca().set_aspect("equal", adjustable="box")
         plt.show()
         num_polars = polars.shape[0]
         if num_polars < min:
