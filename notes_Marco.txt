@@ -36,9 +36,7 @@ Hyperparams:
 Average distances worse than version 0, with very high peaks, and more erratic
 Max distances even more erratic
 Training loss converges to 1.5e-04, but with a lot of oscillations
-Test looss surprisingly good, at 0.00014
-
-Version 3: Upping the learning_rate to 0.005 makes the convergence stall at 500 iterations at a worse loss of 1.5e-04. Test loss: 0.00018
+Test loss surprisingly good, at 0.00014
 
 Version 4:
 - Loss is average distance, same NN as v0.
@@ -57,13 +55,16 @@ Version 8:
 - Avg and max distances are much worse (2x) than with loss being avg distance
 
 Version 9:
-- v4 but at 2000 epochs
-- Less distance on training set, but test set similar. Overfitting?
-- Test loss almost the same even though training loss goes from 0.0035 to 0.0024
-
-Version 10:
 - input as image
-- 91 epochs(12k steps)
+- CNN from paper 9
+- 340 epochs(15k steps)
 
 Results:
-already converged after 100 steps, with loss of 0.006
+Although testloss similar, results much worse, zig-zagging airfoils.
+
+Version 10:
+- Same as v0 but 200, 400, 800, 1600, 1600, 800, 400, 200
+- 2000 epochs
+
+Results:
+- Best result but possible overfitting, distances higher on test
